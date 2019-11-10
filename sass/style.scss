@@ -5,10 +5,11 @@ $font-text: 'Josefin Sans', sans-serif;
 $font-header: 'Yeseva One', cursive;
 
 /* Global */
-*, *::before, *::after{
+*, *::before, *::after {
 	  box-sizing: border-box;
 }
-body{
+
+body {
     color: #3d3d3d;
     background-color: $color-light;
     font-size: 18px;
@@ -17,13 +18,15 @@ body{
     margin: 0;
     line-height: 1.7;
 }
-.section-title{
+
+.section-title {
     font-size: 36px;
     font-family: $font-header;
     position: relative;
     margin: 0 0 60px 0;
 }
-.section-title::after{
+
+.section-title::after {
     background-color: $color-main;
     position: absolute;
     content: '';
@@ -33,17 +36,19 @@ body{
     height: 6px;
     transform: translateX(-50%);
 }
-.section{
+
+.section {
     padding: 108px 0;
 }
-.container{
+
+.container {
     max-width: 1140px;
     margin: 60px auto;
     padding: 50px 20px;
 }
 /* Splash */
 /* dzieki 100vh sekcja jest tak wysoka jak okno przegladarki*/
-.splash{
+.splash {
     height: 100vh;
     position: relative;
     background-image: url("https://images.pexels.com/photos/2848020/pexels-photo-2848020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -51,15 +56,17 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+
 /* ustawienie el dziecka w samym srodku rodzica*/
-.splash-inner{
+.splash-inner {
     position: absolute;
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.splash i{
+
+.splash i {
     color: $color-light;
     background-color: $color-main;
     font-size: 30px;
@@ -68,7 +75,8 @@ body{
     line-height: 60px;
     border-radius: 50%;
 }
-.page-title{
+
+.page-title {
     color: $color-light;
     font-size: 60px;
     font-family: $font-header;
@@ -77,8 +85,9 @@ body{
     letter-spacing: 2px;
     text-shadow: 2px 4px 10px #424242;
 }
+
 /* pozioma ozdobna linia*/
-.page-title::after{
+.page-title::after {
     background-color: $color-main;
     position: absolute;
     content: '';
@@ -88,11 +97,68 @@ body{
     height: 7px;
     transform: translateX(-50%);
 }
-.page-subtitle{
+
+.page-subtitle {
     color: $color-light;
     font-size: 22px;
     position: relative;
     margin: 48px 0 0 0;
     letter-spacing: 1.5px;
     text-shadow: 2px 4px 10px #424242;
+}
+
+/* Intro */
+.intro {
+    background: $color-light;
+}
+
+.intro p {
+    font-size: 24px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 48px 0;
+    border-top: 1px solid #424242;
+    border-bottom: 1px solid #424242;
+}
+
+.about {
+    background-color: #f0f0f0;
+    padding: 30px 0;
+}
+
+/* Skills */
+.skill-right, .skill-left {
+    position: relative;
+}
+
+.skill-image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.skill-right .skill-image{
+    right:0;
+}
+
+.skill-right .skill-description {
+    padding: 36px 55% 36px 0;
+    text-align: right;
+}
+
+.skill-left .skill-description {
+    padding: 36px 0 36px 55%;
+    text-align: left;
+}
+
+.skill-image img:hover {
+    transform: scale(1.5, 1.5);
 }
